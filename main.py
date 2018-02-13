@@ -69,6 +69,8 @@ def game(a, f, w):
                     final_velocity = 0
                     acceleration = 0
                     crashed = False
+                    alert = False
+                    pygame.mixer.music.load('sounds/alert.wav')
             if event.type == pygame.KEYUP:
                 if event.key == K_UP:
                     burning = False
@@ -199,4 +201,4 @@ def game(a, f, w):
 
 
 if __name__ == '__main__':
-    game(200000, 5, 5)
+    game(2000, 100, 15)
