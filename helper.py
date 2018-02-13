@@ -4,6 +4,15 @@ WINDOW_HEIGHT = 720
 SHIP_WIDTH = 20
 SHIP_HEIGHT = 80
 
+def test_x(SCREEN, fuel, ticks, landed):
+    if fuel == 0:
+        if ticks % 2 == 0 and not landed:
+            SCREEN.fill([255, 0, 0])
+        else:
+            SCREEN.fill([0, 0, 0])
+    else:
+        SCREEN.fill([0, 0, 0])
+
 ### Number, Number --> Number
 ### Calculate altitude-pixel scale to fit window
 def update_scale(max_altitude, window_height):

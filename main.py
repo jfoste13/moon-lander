@@ -117,13 +117,8 @@ def game(a, f, w):
 
 
         ### DRAWING ###
-        if fuel == 0:
-            if ticks % 2 == 0 and not landed:
-                SCREEN.fill([255, 0, 0])
-            else:
-                SCREEN.fill([0, 0, 0])
-        else:
-            SCREEN.fill([0, 0, 0])
+        test_x(SCREEN, fuel, ticks, landed)
+
 
 
 
