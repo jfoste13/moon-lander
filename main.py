@@ -56,8 +56,7 @@ def game(a, f, w):
                     releasing = True
                 elif event.key == K_RIGHT or event.key == K_LEFT:
                     maintaining = True
-                elif event.key == K_r and landed:
-                    print('You landed')
+                elif event.key == K_r:
                     ticks = 0
                     final_ticks = 0
                     fuel = f
@@ -98,7 +97,8 @@ def game(a, f, w):
                 if not thrust_channel.get_busy():
                     thrust_channel.play(thrust_sound)
         else:
-            thrust_sound.set_volume(0)
+            #thrust_sound.set_volume(0)
+            pass
 
         if altitude > 0:
             altitude = update_altitude(altitude, velocity)
@@ -199,4 +199,4 @@ def game(a, f, w):
 
 
 if __name__ == '__main__':
-    game(2000, 500, 5)
+    game(200000, 5, 5)
