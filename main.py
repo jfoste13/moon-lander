@@ -98,7 +98,7 @@ def game(a, f, w):
                 if not thrust_channel.get_busy():
                     thrust_channel.play(thrust_sound)
         else:
-            thrust_channel.stop()
+            thrust_sound.set_volume(0)
 
         if altitude > 0:
             altitude = update_altitude(altitude, velocity)
@@ -199,4 +199,4 @@ def game(a, f, w):
 
 
 if __name__ == '__main__':
-    game(1000, 50, 10)
+    game(2000, 500, 5)
