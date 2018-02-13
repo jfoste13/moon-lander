@@ -196,4 +196,4 @@ def game(a, f, w):
 
 
 if __name__ == '__main__':
-    game(3000, 1000, 15)
+    game(3000, 1010, 15)
