@@ -49,7 +49,7 @@ def game(a, f, w):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
-            if event.type == pygame.KEYDOWN:
+            elif event.type == pygame.KEYDOWN:
                 if event.key == K_UP:
                     burning = True
                 elif event.key == K_DOWN:
@@ -71,7 +71,7 @@ def game(a, f, w):
                     crashed = False
                     alert = False
                     pygame.mixer.music.load('sounds/alert.wav')
-            if event.type == pygame.KEYUP:
+            elif event.type == pygame.KEYUP:
                 if event.key == K_UP:
                     burning = False
                 elif event.key == K_DOWN:
