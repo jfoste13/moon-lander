@@ -133,13 +133,12 @@ def game(a, f, w):
             pygame.draw.rect(SCREEN, [167, 167, 167], [WINDOW_WIDTH / 2 + 20, (WINDOW_HEIGHT - 50), 30, 50])
 
         # Rocket flames
-        if burning or maintaining:
-            if not fuel_rate == 0:
-                pygame.draw.rect(SCREEN, [238, 118, 0], [- 1 + WINDOW_WIDTH / 2 - (SHIP_WIDTH / 2), (WINDOW_HEIGHT - altitude / scale), SHIP_WIDTH / 3, fuel_rate * 5])
-                pygame.draw.rect(SCREEN, [255, 255, 0], [2 + WINDOW_WIDTH / 2 - (SHIP_WIDTH / 2), (WINDOW_HEIGHT - altitude / scale), SHIP_WIDTH / 3, fuel_rate * 6])
-                pygame.draw.rect(SCREEN, [255, 51, 0], [1 + WINDOW_WIDTH / 2 - (SHIP_WIDTH / 6), (WINDOW_HEIGHT - altitude / scale), SHIP_WIDTH / 3, fuel_rate * 7])
-                pygame.draw.rect(SCREEN, [238, 118, 0], [5 + WINDOW_WIDTH / 2, (WINDOW_HEIGHT - altitude / scale), SHIP_WIDTH / 3, fuel_rate * 5])
-                pygame.draw.rect(SCREEN, [255, 255, 0], [1 + WINDOW_WIDTH / 2, (WINDOW_HEIGHT - altitude / scale), SHIP_WIDTH / 3, fuel_rate * 6])
+        if not fuel_rate == 0:
+            pygame.draw.rect(SCREEN, [238, 118, 0], [- 1 + WINDOW_WIDTH / 2 - (SHIP_WIDTH / 2), (WINDOW_HEIGHT - altitude / scale), SHIP_WIDTH / 3, fuel_rate * 5])
+            pygame.draw.rect(SCREEN, [255, 255, 0], [2 + WINDOW_WIDTH / 2 - (SHIP_WIDTH / 2), (WINDOW_HEIGHT - altitude / scale), SHIP_WIDTH / 3, fuel_rate * 6])
+            pygame.draw.rect(SCREEN, [255, 51, 0], [1 + WINDOW_WIDTH / 2 - (SHIP_WIDTH / 6), (WINDOW_HEIGHT - altitude / scale), SHIP_WIDTH / 3, fuel_rate * 7])
+            pygame.draw.rect(SCREEN, [238, 118, 0], [5 + WINDOW_WIDTH / 2, (WINDOW_HEIGHT - altitude / scale), SHIP_WIDTH / 3, fuel_rate * 5])
+            pygame.draw.rect(SCREEN, [255, 255, 0], [1 + WINDOW_WIDTH / 2, (WINDOW_HEIGHT - altitude / scale), SHIP_WIDTH / 3, fuel_rate * 6])
 
         # The ground
         pygame.draw.rect(SCREEN, [192, 192, 192], [0, WINDOW_HEIGHT - 5, WINDOW_WIDTH, 5])

@@ -52,7 +52,7 @@ def update_fuel_rate(burning, releasing, maintaining, fuel_rate, burner_rate):
     elif maintaining:
         return fuel_rate
     else:
-        if fuel_rate - (.01 * 2 * burner_rate) < 0:
+        if fuel_rate - (.01 * 1 * burner_rate) < 0:
             return 0
         else:
-            return fuel_rate - (.01 * 2 * burner_rate)
+            return fuel_rate - (.01 * 1 * burner_rate)
