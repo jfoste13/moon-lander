@@ -168,13 +168,13 @@ def game(a, f, w):
         if landed:
             if final_velocity <= -25:
                 crash_sound.set_volume(1)
-                ending_display = ending_font.render("The lander was completely destroyed! Whoops!", True, (255, 0, 0))
+                ending_display = ending_font.render("The lander is completely destroyed!", True, (255, 0, 0))
                 if crashed == False:
                     crash_sound.play()
                     crashed = True
             elif final_velocity < -10:
                 crash_sound.set_volume(0.25)
-                ending_display = ending_font.render('Slight damage on the lander! Better luck next time!', True, (255, 255, 0))
+                ending_display = ending_font.render('Slight damage on the lander.', True, (255, 255, 0))
             else:
                 ending_display = ending_font.render('No damage on the lander! Great job!', True, (0, 255, 0))
 
@@ -195,4 +195,6 @@ def game(a, f, w):
 
 
 if __name__ == '__main__':
-    game(3000, 1010, 15)
+    ### INITIAL ALTITUDE, FUEL AMOUNT, TICK-RATE
+    ### WINDOW HEIGHT SCALES TO ALTITUDE
+    game(1300, 500, 15)
